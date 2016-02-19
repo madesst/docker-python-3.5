@@ -22,6 +22,7 @@ RUN cd /usr/local/bin \
         && ln -s /usr/bin/pydoc3.5 pydoc \
         && ln -s /usr/bin/idle3.5 idle
 
+COPY ./pycharm-debug-py3k.egg /pycharm-debug-py3k.egg
 RUN pip install virtualenv
 
 CMD ["/bin/bash"]
