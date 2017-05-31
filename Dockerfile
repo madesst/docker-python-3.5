@@ -2,6 +2,7 @@ FROM centos:7
 
 MAINTAINER madesst@gmail.com
 
+RUN rpm --rebuilddb; yum install -y yum-plugin-ovl
 RUN yum install epel-release -y && rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
 RUN yum install -y https://centos7.iuscommunity.org/ius-release.rpm && rpm --import /etc/pki/rpm-gpg/IUS-COMMUNITY-GPG-KEY
 
